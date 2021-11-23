@@ -19,7 +19,7 @@ while len(guessed_states) < 50:
     if answer_input.capitalize() == "Exit":
         missing_states = []
         for state in all_states:
-            if state is not guessed_states:
+            if state not in guessed_states:
                 missing_states.append(state)
 
         new_data = pandas.DataFrame(missing_states)
